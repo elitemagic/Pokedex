@@ -1,0 +1,1 @@
+let pokemonList=[{name: "bulbasaur", height: "2", type: "grass";},{name: "ivysaur", height: "2", type: "grass";},{name: "venusaur", height: "6", type: "grass";},{name: "charmander", height: "2", type: "fire";},{name: "charmelon", height: "3", type: "fire";}{name: "Charizard", height: "5", type: "fire";}]
