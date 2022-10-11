@@ -1,0 +1,30 @@
+:root {   /* Colors */
+    --primary-color: #06f;
+    --secondary-color: #f00;
+    --background-color: rgb(241, 226, 13);
+    --base-font-color: #000;
+  
+    /* other repetitive values  */
+    --font-weight: 300;
+    --body-font-family: 'Open Sans', sans-serif;
+    --font-size: 16px;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    font-family: var(--body-font-family);
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+    line-height: 1.6;   /* Sets the line-height to 1.6 */
+    padding: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+  
+    /*
+    Colors used
+    Text Color (Black): #000;
+    Primary Color (Blue): #0066ff;
+    Secondary Color (Red): #ff0000;
+     */
+  }
+  
