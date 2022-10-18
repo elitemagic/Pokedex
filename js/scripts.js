@@ -18,13 +18,14 @@ let pokemonList=[
         name: "Charizard", height: "5", type: "fire"
     }
 ];
-  
-// Display a list of all of the Pokemon and their height, commenting 'Wow' with pokemon over 5 in height
-for (let i=0; i < pokemonList.length; i++){
-    if (pokemonList[i].height >5 ){
-      document.write("<p>" + pokemonList[i].name + " " + "(height:" + pokemonList[i].height + "); Wow, thats big!");
-    }
-    else {
-      document.write("<p>" + pokemonList[i].name + " " + "(height:" + pokemonList[i].height + ");");
-    }
+
+
+
+// Display a list of all of the Pokemon and their height
+
+function myLoopFunction(poke) {
+    document.write('<p>' + poke.name + ' (height:' + poke.height + ');');
   }
+  
+  pokemonList.forEach(myLoopFunction)
+  
