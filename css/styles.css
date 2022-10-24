@@ -1,30 +1,82 @@
 :root {   /* Colors */
-    --primary-color: #06f;
-    --secondary-color: #f00;
-    --background-color: rgb(241, 226, 13);
-    --base-font-color: #000;
-  
-    /* other repetitive values  */
-    --font-weight: 300;
-    --body-font-family: 'Open Sans', sans-serif;
-    --font-size: 16px;
+  --primary-color: #06f;
+  --secondary-color: #f00;
+  --background-color: #FFCC01;
+  --base-font-color: #000;
+
+  /* other repetitive values  */
+  --font-weight: 300;
+  --body-font-family: 'Open Sans', sans-serif;
+  --font-size: 16px;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--body-font-family);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: 1.6;   /* Sets the line-height to 1.6 */
+  padding: 5px;
+  margin-left: 25px;
+  margin-right: 25px;
+
+  /*
+  Colors used
+  Text Color (Black): #000;
+  Primary Color (Blue): #0066ff;
+  Secondary Color (Red): #ff0000;
+   */
+}
+
+.button-class {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #4caf50;
+}
+
+.page-header__item {
+  flex: 0 1 10px;
+  height: 300px;
+  width: 400px;
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
   }
-  
-  body {
-    background-color: var(--background-color);
-    font-family: var(--body-font-family);
-    font-weight: var(--font-weight);
-    font-size: var(--font-size);
-    line-height: 1.6;   /* Sets the line-height to 1.6 */
-    padding: 5px;
-    margin-left: 25px;
-    margin-right: 25px;
-  
-    /*
-    Colors used
-    Text Color (Black): #000;
-    Primary Color (Blue): #0066ff;
-    Secondary Color (Red): #ff0000;
-     */
+}
+
+@media all and (min-width: 750px) and (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
   }
-  
+}
+
+@media all and (max-width: 1000px) {
+  .grid {
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}
+
+
