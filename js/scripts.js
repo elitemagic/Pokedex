@@ -1,47 +1,71 @@
 let pokemonRepository = (function() {
-    let pokemonList = [
-      {
-        name: "Bulbasaur", height: "2", type: "grass"
-      },
-      {
-        name: "Ivysaur", height: "2", type: "grass"
-      },
-      {
-        name: "Venusaur", height: "6", type: "grass"
-      },
-      {
-        name: "Charmander", height: "2", type: "fire"
-      },
-      {
-        name: "Charmelon", height: "3", type: "fire"
-      },
-      {
-        name: "Charizard", height: "5", type: "fire"
-      }
-    ];
-    // Display a list of all of the Pokemon and their height
-    function myLoopFunction(poke) {
-      document.write('<p>' + poke.name + ' (height:' + poke.height + ');');
+  let repository = [
+    {
+      name: "Bulbasaur", height: "2", types: "grass"
+    },
+    {
+      name: "Ivysaur", height: "2", types: "grass"
+    },
+    {
+      name: "Venusaur", height: "6", types: "grass"
+    },
+    {
+      name: "Charmander", height: "2", types: "fire"
+    },
+    {
+      name: "Charmelon", height: "3", types: "fire"
+    },
+    {
+      name: "Charizard", height: "5", types: "fire"
+    },
+  ];
+
+  function add(pokemon) {
+    if (
+      typeof pokemon === "object" &&
+      "name" in pokemon &&
+      "height" in pokemon &&
+      "types" in pokemon 
+    ) {
+    repository.push(pokemon);
+    } else {
+    console.log ("Pokemon is not correct");
     }
+  }
+  function getAll() {
+    return repository;
+  }
+
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
+  function addListItem(pokemon){
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listPokemon = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+    listPokemon.appendChild(button);
+    pokemonList.appendChild(listPokemon);
+    button.addEventListener("click", function(event) {
+      showDetails(pokemon)
+    })
+  }
   
-    function getAll() {
-      return pokemonList;
-    }
-  
-    function add(pokemon) {
-      pokemonList.push(pokemon);
-    }
-  
-    function addListItem(pokemon1) {
-    }
-  
-    pokemonList.forEach(myLoopFunction)
-  
-    return {
-      getAll: getAll,
-      add: add
-    };
-  
-  })();
-  
-  
+  return {
+    add: add,
+    getAll: getAll,
+    addListItem: addListItem,
+    showDetails: showDetails
+  };
+})();
+
+console.log (pokemonRepository.getAll());
+
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);  
+});
+
+
+
