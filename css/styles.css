@@ -33,6 +33,7 @@ body {
   border: none;
   color: white;
   padding: 16px 32px;
+  border-radius: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
