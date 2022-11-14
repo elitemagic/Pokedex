@@ -102,6 +102,9 @@ let pokemonRepository = (function() {
     let closeModalButton = document.getElementById('close-modal');
     closeModalButton.addEventListener('click', hideModal);
 
+    modal.classList.add('is-visible');
+    overlay.classList.add('is-visible');
+
     modalBody.appendChild(pokemonImage);
     modalBody.appendChild(pokemonHeight);
     modalBody.appendChild(pokemonWeight);
