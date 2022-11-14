@@ -99,13 +99,8 @@ let pokemonRepository = (function() {
     let pokemonWeight = document.createElement('p');
     pokemonWeight.innerText = `Weight: ${pokemon.weight || '?'}`;
 
-    let closeButtonElement = document.createElement('button');
-    closeButtonElement.innerText = 'Close';
-    closeButtonElement.addEventListener('click', hideModal);
-    modal.classList.add('is-visible');
-    overlay.classList.add('is-visible');
-
-    modalHeader.appendChild(closeButtonElement);
+    let closeModalButton = document.getElementById('close-modal');
+    closeModalButton.addEventListener('click', hideModal);
 
     modalBody.appendChild(pokemonImage);
     modalBody.appendChild(pokemonHeight);
