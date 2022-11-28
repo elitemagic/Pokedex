@@ -29,7 +29,6 @@ body {
 }
 
 
-
 .page-header__item {
   flex: 0 1 10px;
   height: 200px;
@@ -38,32 +37,11 @@ body {
   display: block;
 }
 
-/* @media all and (min-width: 350px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
+
+h2 {
+  font-size: 16px;
 }
 
-@media all and (min-width: 350px) and (max-width: 1000px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media all and (max-width: 1000px) {
-  .grid {
-    grid-gap: 10px;
-  }
-
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  } */
-
-  h2 {
-    font-size: 16px;
-  }
-}
 
 
 
