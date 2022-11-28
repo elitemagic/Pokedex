@@ -32,8 +32,10 @@ body {
 
 .page-header__item {
   flex: 0 1 10px;
-  height: 300px;
-  width: 400px;
+  height: 200px;
+  width: 350px;
+  margin: auto;
+  display: block;
 }
 
 @media all and (min-width: 350px) {
