@@ -38,7 +38,7 @@ body {
   display: block;
 }
 
-@media all and (min-width: 350px) {
+/* @media all and (min-width: 350px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -58,7 +58,7 @@ body {
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
-  }
+  } */
 
   h2 {
     font-size: 16px;
