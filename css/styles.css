@@ -17,8 +17,8 @@ body {
   font-size: var(--font-size);
   line-height: 1.6;   /* Sets the line-height to 1.6 */
   padding: 5px;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
 
   /*
   Colors used
@@ -27,55 +27,64 @@ body {
   Secondary Color (Red): #ff0000;
    */
 }
+.list-group-item{
+  padding: 0;
+  border: 0;
+}
+.container{
+  background-color: var(--background-color);
 
+}
+.card { 
+  background-color: var(--background-color);
 
-.page-header__item {
-  flex: 0 1 10px;
-  height: 200px;
-  width: 350px;
-  margin: auto;
-  display: block;
+}
+
+.card:hover {
+  animation: bounce 0.5s linear;
+
+}
+
+@keyframes bounce{
+  20% {
+    transform: translateY(-9px);
+  } 35% {
+    transform: translateY(0px);
+  } 55% {
+    transform: translateY(-6px);
+  } 70% {
+    transform: translateY(0px);
+  } 85% {
+    transform: translateY(-3px);
+  }
 }
 
 
+.page-header__item {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   
+}
+.card-body{
+  text-align: center;
+}
 h2 {
   font-size: 16px;
 }
 
-.list-group-item {
-
-  position: relative;
-    display: -ms-flexbox;
-    display:inline-flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: var(--second-color);
-    color: #222224;
-    background-clip: border-box;
-    border: 2px solid #F00000;
-    border-radius: 0.25rem;
-    align-items: center;
-    align-content: center;
-    padding: 15px;
-    margin: 45px;
+.card-front {
+  background-color: var(--background-color);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  width: 100px;
+  text-align: center;
 }
 
-
-.card {
-  position: relative;
-  display: -ms-flexbox;
-  display:inline-flex;
-  -ms-flex-direction: column;
-  background-clip: border-box;
-  background-color: #FFCC01;
+.btn {
+  text-transform: capitalize;
   
-  /* border: 2px solid #F00000;
-  border-radius: 0.25rem;
-  align-items: center;
-  align-content: center;
-  padding: 15px;
-  margin:  */
 }
 

@@ -1,6 +1,6 @@
 let pokemonRepository = (function() {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=12';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   let pokemonListElement = $('.pokemon-list');
 
@@ -24,11 +24,11 @@ let pokemonRepository = (function() {
   function addListItem(pokemon) {
     pokemonRepository.loadDetails(pokemon).then(function() {
 
-      let list = $('<div class="list-group-item"></div>');
+      let list = $('<div class="list-group-item col-sm-3"></div>');
 
-      let card = $('<div class="card-img-top" style="width:175px"></div>');
+      let card = $('<div class="card""></div>');
 
-      let image = $('<img class="modal-img" style="width:200%">');
+      let image = $('<img class="card-front">');
       image.attr("src", pokemon.frontimageUrl);
       image.alt = 'A front image of the choosen pokemon';
       
@@ -103,16 +103,14 @@ let pokemonRepository = (function() {
     modalBody.empty();
     modalTitle.text(item.name);
 
-    let frontImage = $('<img class="modal-img" style="width:50%">');
+    let frontImage = $('<img class="modal-front" style="width:40%">');
     frontImage.attr("src", item.frontimageUrl);
     frontImage.alt = 'A front image of the choosen pokemon';
 
-    let imageBack = $('<img class="modal-img" style="width:50%">');
+    let imageBack = $('<img class="modal-back" style="width:40%">');
     imageBack.attr("src", item.backimageUrl);
     imageBack.alt = 'A back image of the choosen pokemon';
-    
-    
-  
+      
     let itemHeight = document.createElement('p');
     itemHeight.innerText = `Height: ${item.height || '?'}`;
 
@@ -129,6 +127,7 @@ let pokemonRepository = (function() {
     modalBody.append(itemAbilities);
   };
 
+
   return {
     add: add,
     getAll: getAll,
@@ -136,7 +135,7 @@ let pokemonRepository = (function() {
     addListItem: addListItem,
     loadDetails: loadDetails,
     showDetails: showDetails,
-    showModal: showModal,
+    
   };
 })();
 
