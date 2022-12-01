@@ -31,18 +31,17 @@ body {
   padding: 0;
   border: 0;
 }
+
 .container{
   background-color: var(--background-color);
-
 }
+
 .card { 
   background-color: var(--background-color);
-
 }
 
 .card:hover {
   animation: bounce 0.5s linear;
-
 }
 
 @keyframes bounce{
@@ -63,12 +62,13 @@ body {
 .page-header__item {
   display: block;
   margin-left: auto;
-  margin-right: auto;
-   
+  margin-right: auto;   
 }
+
 .card-body{
   text-align: center;
 }
+
 h2 {
   font-size: 16px;
 }
